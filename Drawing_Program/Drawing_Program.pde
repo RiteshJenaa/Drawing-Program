@@ -1,4 +1,4 @@
-//Global vairables //<>// //<>//
+//Global vairables //<>//
 Boolean draw=false;
 float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight;
 //
