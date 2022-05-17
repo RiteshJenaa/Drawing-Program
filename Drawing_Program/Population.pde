@@ -11,6 +11,8 @@ void population()
   quitButtonY = displayHeight*0;
   quitButtonWidth = displayWidth*1/20;
   quitButtonHeight = displayHeight*1/20;
+  //
+  font = createFont("Arial", initialFontSize);
 }
 
 //End population

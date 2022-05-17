@@ -4,6 +4,8 @@ float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeigh
 float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 int reset=1;
 color resetWhite=#FFFFFF, red=#FF0A03, black=0, quitButtonColour;
+PFont font;
+int initialFontSize=55;
 //
 void setup()
 {
@@ -22,6 +24,10 @@ void draw()
   //Drawing Tools
   if ( draw==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight) line( mouseX, mouseY, pmouseX, pmouseY );  //End Line Draw
   if ( draw==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight) ellipse( mouseX, mouseY, drawingDiameter, drawingDiameter ); //Circle
+  //
+  //Text QuitButton
+  fill(black); //INK
+  textAlign(CENTER, CENTER);
   //
   //QuitButton Hoverover
   if ( mouseX>=quitButtonX && mouseX<=quitButtonX+quitButtonWidth && mouseY>=quitButtonY && mouseY<=quitButtonY+quitButtonHeight ) {
