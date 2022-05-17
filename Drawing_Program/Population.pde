@@ -7,6 +7,10 @@ void population()
   drawingSurfaceHeight = displayHeight*4/5;
   drawingDiameter = displayWidth*1/80;
   //
+  quitButtonX = displayWidth*19/20;
+  quitButtonY = displayHeight*0;
+  quitButtonWidth = displayWidth*1/20;
+  quitButtonHeight = displayHeight*1/20;
 }
 
 //End population

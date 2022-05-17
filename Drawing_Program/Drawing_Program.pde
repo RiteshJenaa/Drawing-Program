@@ -1,6 +1,7 @@
 //Global vairables //<>// //<>// //<>//
 Boolean draw=false;
 float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight, drawingDiameter; 
+float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 //
 void setup()
 {
@@ -19,6 +20,8 @@ void draw()
   //Drawing Tools
   if ( draw==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight) line( mouseX, mouseY, pmouseX, pmouseY );  //End Line Draw
   if ( draw==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight) ellipse( mouseX, mouseY, drawingDiameter, drawingDiameter ); //Circle
+  //
+  rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight); 
 }
 //End draw
 
