@@ -55,6 +55,10 @@ void mousePressed()
       draw = false;
     }//End draw Boolean
   }//Button Paper (Drawing Surface)
+  
+  //
+  
+  if ( mouseX>=quitButtonX && mouseX<=quitButtonX+quitButtonWidth && mouseY>=quitButtonY && mouseY<=quitButtonY+quitButtonHeight ) exit();
 }//End mousepressed
 
 //
