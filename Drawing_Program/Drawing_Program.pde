@@ -1,20 +1,15 @@
-//Global vairables //<>//
+//Global vairables //<>// //<>// //<>//
 Boolean draw=false;
-float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight;
+float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight, drawingDiameter; 
 //
 void setup()
 {
   //Mandatory: Mistaken display orientation should break app, feedback to console and CANVAS
   fullScreen();
   //
-  //Population
-  drawingSurfaceX = displayWidth*0/4; //<>//
-  drawingSurfaceY = displayHeight*0/5;
-  drawingSurfaceWidth = displayWidth*3/4;
-  drawingSurfaceHeight = displayHeight*4/5;
+  population();
   //
   rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
-  //
 }
 
 //End setup
@@ -23,7 +18,7 @@ void draw()
 {
   //Drawing Tools
   if ( draw==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight) line( mouseX, mouseY, pmouseX, pmouseY );  //End Line Draw
-  if () ellipse( mouseX, mouseY, pmouseX, pmouseY );
+  if ( draw==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight) ellipse( mouseX, mouseY, drawingDiameter, drawingDiameter ); //Circle
 }
 //End draw
 
@@ -46,4 +41,4 @@ void mousePressed()
 
 //
 
-//End Main Program //<>//
+//End Main Program
