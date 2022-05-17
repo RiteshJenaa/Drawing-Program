@@ -2,6 +2,8 @@
 Boolean draw=false;
 float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight, drawingDiameter; 
 float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
+int reset=1;
+color resetWhite=#FFFFFF, red=#FF0A03, black=0, quitButtonColour;
 //
 void setup()
 {
@@ -21,7 +23,20 @@ void draw()
   if ( draw==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight) line( mouseX, mouseY, pmouseX, pmouseY );  //End Line Draw
   if ( draw==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight) ellipse( mouseX, mouseY, drawingDiameter, drawingDiameter ); //Circle
   //
+  //QuitButton Hoverover
+  if ( mouseX>=quitButtonX && mouseX<=quitButtonX+quitButtonWidth && mouseY>=quitButtonY && mouseY<=quitButtonY+quitButtonHeight ) {
+    quitButtonColour = red;
+  } else {
+    quitButtonColour = black;
+  }//End QuitButton Hoverover
+
+  //
+
+  fill(quitButtonColour);
+  noStroke();
   rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight); 
+  stroke(reset);
+  fill(resetWhite); //White
 }
 //End draw
 
