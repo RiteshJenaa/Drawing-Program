@@ -5,7 +5,8 @@ float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 int reset=1;
 color resetWhite=#FFFFFF, red=#FF0A03, black=0, quitButtonColour;
 PFont font;
-int initialFontSize=55;
+int initialFontSize=55, size;
+String quitButtonText = "QUIT";
 //
 void setup()
 {
@@ -22,12 +23,9 @@ void setup()
 void draw()
 {
   //Drawing Tools
+  fill(resetWhite);
   if ( draw==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight) line( mouseX, mouseY, pmouseX, pmouseY );  //End Line Draw
   if ( draw==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight) ellipse( mouseX, mouseY, drawingDiameter, drawingDiameter ); //Circle
-  //
-  //Text QuitButton
-  fill(black); //INK
-  textAlign(CENTER, CENTER);
   //
   //QuitButton Hoverover
   if ( mouseX>=quitButtonX && mouseX<=quitButtonX+quitButtonWidth && mouseY>=quitButtonY && mouseY<=quitButtonY+quitButtonHeight ) {
@@ -43,6 +41,14 @@ void draw()
   rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight); 
   stroke(reset);
   fill(resetWhite); //White
+  
+  //Text QuitButton
+  fill(black); //INK
+  textAlign(CENTER, CENTER);
+  size = 25;
+  textFont(font, size);
+  text(quitButtonText, quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
+  //
 }
 //End draw
 
@@ -61,9 +67,9 @@ void mousePressed()
       draw = false;
     }//End draw Boolean
   }//Button Paper (Drawing Surface)
-  
+
   //
-  
+
   if ( mouseX>=quitButtonX && mouseX<=quitButtonX+quitButtonWidth && mouseY>=quitButtonY && mouseY<=quitButtonY+quitButtonHeight ) exit();
 }//End mousepressed
 
