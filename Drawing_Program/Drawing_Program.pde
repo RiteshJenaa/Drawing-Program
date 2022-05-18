@@ -1,14 +1,14 @@
 //Global vairables //<>// //<>// //<>//
 Boolean draw=false;
 float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight, drawingDiameter; 
-float secondButtonX, secondButtonY, secondButtonHeight, secondButtonWidth;
 float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
+float resetButtonX, resetButtonY, resetButtonHeight, resetButtonWidth;
 int reset=1;
 color resetWhite=#FFFFFF, red=#FF0A03, green=#72F04D, yellow=#ECF04D, black=0, quitButtonColour, secondButtonColour;
 PFont font;
 int initialFontSize=55, size;
 String quitButtonText = "QUIT";
-String SecondButtonText = "RESET!";
+String resetButtonText = "RESET!";
 //
 void setup()
 {
@@ -55,7 +55,7 @@ void draw()
 
   //Second Rect
   //Second Button Hoverover
-  if ( mouseX>=secondButtonX && mouseX<=secondButtonX+secondButtonWidth && mouseY>=secondButtonY && mouseY<=secondButtonY+secondButtonHeight ) {
+  if ( mouseX>=resetButtonX && mouseX<=resetButtonX+resetButtonWidth && mouseY>=resetButtonY && mouseY<=resetButtonY+resetButtonHeight ) {
     secondButtonColour = yellow;
   } else {
     secondButtonColour = resetWhite;
@@ -65,7 +65,7 @@ void draw()
 
   fill(secondButtonColour);
   stroke(green);
-  rect( secondButtonX, secondButtonY, secondButtonHeight, secondButtonWidth );
+  rect(resetButtonX, resetButtonY, resetButtonHeight, resetButtonWidth);
   stroke(reset);
   fill(resetWhite); //White
 
@@ -74,7 +74,7 @@ void draw()
   textAlign(CENTER, CENTER);
   size = 25;
   textFont(font, size);
-  text(SecondButtonText, secondButtonX, secondButtonY, secondButtonHeight, secondButtonWidth);
+  text(resetButtonText, resetButtonX, resetButtonY, resetButtonHeight, resetButtonWidth);
 }
 //End draw
 
@@ -97,6 +97,7 @@ void mousePressed()
   //
 
   if ( mouseX>=quitButtonX && mouseX<=quitButtonX+quitButtonWidth && mouseY>=quitButtonY && mouseY<=quitButtonY+quitButtonHeight ) exit();
+  if ( mouseX>=resetButtonX && mouseX<=resetButtonX+resetButtonWidth && mouseY>=resetButtonY && mouseY<=resetButtonY+resetButtonHeight ) draw=false;
 }//End mousepressed
 
 //

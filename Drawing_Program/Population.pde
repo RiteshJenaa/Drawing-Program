@@ -12,10 +12,10 @@ void population()
   quitButtonWidth = displayWidth*1/10;
   quitButtonHeight = displayHeight*1/10;
   //
-  secondButtonX = quitButtonX;
-  secondButtonY = displayHeight*1/10;
-  secondButtonHeight = quitButtonWidth;
-  secondButtonWidth = quitButtonHeight;
+  resetButtonX = quitButtonX;
+  resetButtonY = displayHeight*1/10;
+  resetButtonHeight = quitButtonWidth;
+  resetButtonWidth = quitButtonHeight;
   //
   font = createFont("Arial", initialFontSize);
 }
