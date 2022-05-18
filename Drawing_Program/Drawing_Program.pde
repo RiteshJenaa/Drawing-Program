@@ -1,14 +1,14 @@
 //Global vairables //<>// //<>// //<>//
 Boolean draw=false;
 float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight, drawingDiameter; 
-float secondTextX, secondTextY, secondTextHeight, secondTextWidth;
+float secondButtonX, secondButtonY, secondButtonHeight, secondButtonWidth;
 float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 int reset=1;
-color resetWhite=#FFFFFF, red=#FF0A03, black=0, quitButtonColour;
+color resetWhite=#FFFFFF, red=#FF0A03, green=#72F04D, yellow=#ECF04D, black=0, quitButtonColour, secondButtonColour;
 PFont font;
 int initialFontSize=55, size;
 String quitButtonText = "QUIT";
-String SecondButtonText = "YAY!";
+String SecondButtonText = "RESET!";
 //
 void setup()
 {
@@ -33,13 +33,13 @@ void draw()
   if ( mouseX>=quitButtonX && mouseX<=quitButtonX+quitButtonWidth && mouseY>=quitButtonY && mouseY<=quitButtonY+quitButtonHeight ) {
     quitButtonColour = red;
   } else {
-    quitButtonColour = black;
+    quitButtonColour = resetWhite;
   }//End QuitButton Hoverover
 
   //
 
   fill(quitButtonColour);
-  noStroke();
+  stroke(green);
   rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight); 
   stroke(reset);
   fill(resetWhite); //White
@@ -50,20 +50,31 @@ void draw()
   size = 25;
   textFont(font, size);
   text(quitButtonText, quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
-  
+
   //
-  
+
   //Second Rect
-  fill(resetWhite);
-  rect( secondTextX, secondTextY, secondTextHeight, secondTextWidth );
-  fill(black);
+  //Second Button Hoverover
+  if ( mouseX>=secondButtonX && mouseX<=secondButtonX+secondButtonWidth && mouseY>=secondButtonY && mouseY<=secondButtonY+secondButtonHeight ) {
+    secondButtonColour = yellow;
+  } else {
+    secondButtonColour = resetWhite;
+  }//End Second Button Hoverover
+
+  //
+
+  fill(secondButtonColour);
+  stroke(green);
+  rect( secondButtonX, secondButtonY, secondButtonHeight, secondButtonWidth );
+  stroke(reset);
+  fill(resetWhite); //White
 
   //Text SecondButton
   fill(black); //INK
   textAlign(CENTER, CENTER);
   size = 25;
   textFont(font, size);
-  text(SecondButtonText, secondTextX, secondTextY, secondTextHeight, secondTextWidth);
+  text(SecondButtonText, secondButtonX, secondButtonY, secondButtonHeight, secondButtonWidth);
 }
 //End draw
 

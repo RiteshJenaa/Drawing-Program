@@ -1,21 +1,21 @@
 void population()
 {
   //Population
-  drawingSurfaceX = displayWidth*0/4;
-  drawingSurfaceY = displayHeight*0/5;
-  drawingSurfaceWidth = displayWidth*3/4;
-  drawingSurfaceHeight = displayHeight*4/5;
+  drawingSurfaceX = displayWidth*0;
+  drawingSurfaceY = displayHeight*0;
+  drawingSurfaceWidth = displayWidth*4/5;
+  drawingSurfaceHeight = displayHeight;
   drawingDiameter = displayWidth*1/80;
   //
-  quitButtonX = displayWidth*19/20;
+  quitButtonX = displayWidth*4/5;
   quitButtonY = displayHeight*0;
-  quitButtonWidth = displayWidth*1/20;
-  quitButtonHeight = displayHeight*1/20;
+  quitButtonWidth = displayWidth*1/10;
+  quitButtonHeight = displayHeight*1/10;
   //
-  secondTextX = quitButtonX;
-  secondTextY = displayHeight*1/20;
-  secondTextHeight = quitButtonWidth;
-  secondTextWidth = quitButtonHeight;
+  secondButtonX = quitButtonX;
+  secondButtonY = displayHeight*1/10;
+  secondButtonHeight = quitButtonWidth;
+  secondButtonWidth = quitButtonHeight;
   //
   font = createFont("Arial", initialFontSize);
 }
