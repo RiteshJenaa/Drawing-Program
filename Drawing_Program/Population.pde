@@ -12,6 +12,11 @@ void population()
   quitButtonWidth = displayWidth*1/20;
   quitButtonHeight = displayHeight*1/20;
   //
+  secondTextX = quitButtonX;
+  secondTextY = displayHeight*1/20;
+  secondTextHeight = quitButtonWidth;
+  secondTextWidth = quitButtonHeight;
+  //
   font = createFont("Arial", initialFontSize);
 }
 

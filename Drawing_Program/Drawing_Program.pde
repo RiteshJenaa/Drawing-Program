@@ -1,12 +1,14 @@
 //Global vairables //<>// //<>// //<>//
 Boolean draw=false;
 float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight, drawingDiameter; 
+float secondTextX, secondTextY, secondTextHeight, secondTextWidth;
 float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 int reset=1;
 color resetWhite=#FFFFFF, red=#FF0A03, black=0, quitButtonColour;
 PFont font;
 int initialFontSize=55, size;
 String quitButtonText = "QUIT";
+String SecondButtonText = "YAY!";
 //
 void setup()
 {
@@ -41,14 +43,27 @@ void draw()
   rect(quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight); 
   stroke(reset);
   fill(resetWhite); //White
-  
+
   //Text QuitButton
   fill(black); //INK
   textAlign(CENTER, CENTER);
   size = 25;
   textFont(font, size);
   text(quitButtonText, quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
+  
   //
+  
+  //Second Rect
+  fill(resetWhite);
+  rect( secondTextX, secondTextY, secondTextHeight, secondTextWidth );
+  fill(black);
+
+  //Text SecondButton
+  fill(black); //INK
+  textAlign(CENTER, CENTER);
+  size = 25;
+  textFont(font, size);
+  text(SecondButtonText, secondTextX, secondTextY, secondTextHeight, secondTextWidth);
 }
 //End draw
 
