@@ -17,7 +17,6 @@ void population()
   resetButtonHeight = quitButtonWidth;
   resetButtonWidth = quitButtonHeight;
   //
-  font = createFont("Arial", initialFontSize);
 }
 
 //End population

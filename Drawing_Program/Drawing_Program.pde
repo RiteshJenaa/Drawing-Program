@@ -5,10 +5,6 @@ float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 float resetButtonX, resetButtonY, resetButtonHeight, resetButtonWidth;
 int reset=1;
 color resetWhite=#FFFFFF, red=#FF0A03, green=#72F04D, yellow=#ECF04D, black=0, quitButtonColour, secondButtonColour;
-PFont font;
-int initialFontSize=55, size;
-String quitButtonText = "QUIT";
-String resetButtonText = "RESET!";
 //
 void setup()
 {
@@ -17,9 +13,9 @@ void setup()
   //
   population();
   //
-  rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
+  textSetup();
+  Paper();
 }
-
 //End setup
 
 void draw()
