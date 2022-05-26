@@ -1,9 +1,8 @@
 //Global Variables
 PFont font;
-int initialFontSize=55, size;
+int initialFontSize=55, size=25;
 String quitButtonText = "QUIT";
-String resetButtonText = "RESET!";
-String paperButtonText = "Paper";
+String paperButtonText = "Reset Paper";
 //
 void textSetup()
 {

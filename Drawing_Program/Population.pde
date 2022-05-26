@@ -12,14 +12,9 @@ void population()
   quitButtonWidth = displayWidth*1/10;
   quitButtonHeight = displayHeight*1/10;
   //
-  resetButtonX = quitButtonX;
-  resetButtonY = displayHeight*1/10;
-  resetButtonHeight = quitButtonWidth;
-  resetButtonWidth = quitButtonHeight;
-  //
   paperButtonX = quitButtonX; 
-  paperButtonY = displayHeight*1/5;
-  paperButtonHeight = quitButtonWidth ; 
+  paperButtonY = displayHeight*1/10;
+  paperButtonHeight = quitButtonWidth; 
   paperButtonWidth = quitButtonHeight;
 }
 

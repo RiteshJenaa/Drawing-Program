@@ -1,7 +1,7 @@
 //Global vairables  //<>//
 Boolean draw=false;
 int reset=1;
-color resetWhite=#FFFFFF, red=#FF0A03, green=#72F04D, yellow=#ECF04D, black=0, quitButtonColour, resetButtonColour, paperButtonColour;
+color resetWhite=#FFFFFF, red=#FF0A03, green=#72F04D, yellow=#ECF04D, black=0, gold= #FFD700, turquoise= #AFEEEE, quitButtonColour, paperButtonColour;
 //
 void setup()
 {
@@ -11,6 +11,7 @@ void setup()
   population();
   //
   textSetup();
+  //
   Paper();
 }
 //End setup
@@ -29,8 +30,6 @@ void draw()
   //
   PaperButton();
   //
-  //
-  ResetButton();
 }
 //End draw
 
@@ -55,7 +54,6 @@ void mousePressed()
   if ( mouseX>=quitButtonX && mouseX<=quitButtonX+quitButtonWidth && mouseY>=quitButtonY && mouseY<=quitButtonY+quitButtonHeight ) exit();
   if ( mouseX>=paperButtonX && mouseX<=paperButtonX+paperButtonWidth && mouseY>=paperButtonY && mouseY<=paperButtonY+paperButtonHeight ) paper=true;
   //
-  if ( mouseX>=resetButtonX && mouseX<=resetButtonX+resetButtonWidth && mouseY>=resetButtonY && mouseY<=resetButtonY+resetButtonHeight ) draw=false;
 }//End mousepressed
 
 //
