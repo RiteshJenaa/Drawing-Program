@@ -1,5 +1,6 @@
 //Global Variables
 float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
+float ellipseButtonX, ellipseButtonY, ellipseButtonWidth, ellipseButtonHeight;
 //
 
 void QuitButton() 
@@ -59,3 +60,28 @@ void PaperButton()
 //End PaperButton
 
 //
+
+void EllipseTool()
+{
+  if ( mouseX>=ellipseButtonX && mouseX<=ellipseButtonX+ellipseButtonWidth && mouseY>=ellipseButtonY && mouseY<=ellipseButtonY+ellipseButtonHeight ) {
+    stroke(turquoise);
+    fill(red);
+    rect(ellipseButtonX, ellipseButtonY, ellipseButtonWidth, ellipseButtonHeight);
+    fill(resetWhite);
+    textAlign(CENTER, CENTER);
+    textFont(font, size);
+    text(ellipseButtonText, ellipseButtonX, ellipseButtonY, ellipseButtonWidth, ellipseButtonHeight);
+    
+  } else {
+    
+    stroke(green);
+    fill(resetWhite);
+    rect(ellipseButtonX, ellipseButtonY, ellipseButtonWidth, ellipseButtonHeight);
+    fill(black);
+    textAlign(CENTER, CENTER);
+    textFont(font, size);
+    text(ellipseButtonText, ellipseButtonX, ellipseButtonY, ellipseButtonWidth, ellipseButtonHeight);
+  }
+  fill(resetWhite);
+}
+//End EllipseTool
