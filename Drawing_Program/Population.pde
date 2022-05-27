@@ -14,13 +14,18 @@ void population()
   //
   paperButtonX = quitButtonX; 
   paperButtonY = displayHeight*1/10;
-  paperButtonHeight = quitButtonWidth; 
-  paperButtonWidth = quitButtonHeight;
+  paperButtonWidth = quitButtonWidth;
+  paperButtonHeight = quitButtonHeight; 
   //
   ellipseButtonX = quitButtonX; 
   ellipseButtonY = displayHeight*2/10;
-  ellipseButtonHeight = quitButtonWidth; 
-  ellipseButtonWidth = quitButtonHeight;
+  ellipseButtonWidth = quitButtonWidth; 
+  ellipseButtonHeight = quitButtonHeight;
+  //
+  lineButtonX = displayWidth*4.5/5;
+  lineButtonY = displayHeight*2/10;
+  lineButtonWidth = quitButtonWidth;
+  lineButtonHeight = quitButtonHeight;
 }
 
 //End population

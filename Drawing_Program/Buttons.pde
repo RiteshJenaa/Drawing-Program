@@ -1,6 +1,7 @@
 //Global Variables
 float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 float ellipseButtonX, ellipseButtonY, ellipseButtonWidth, ellipseButtonHeight;
+float lineButtonX, lineButtonY, lineButtonWidth, lineButtonHeight;
 //
 
 void QuitButton() 
@@ -35,27 +36,26 @@ void QuitButton()
 
 void PaperButton()
 {
-  //Paper Rect
-  //Paper Button Hoverover
   if ( mouseX>=paperButtonX && mouseX<=paperButtonX+paperButtonWidth && mouseY>=paperButtonY && mouseY<=paperButtonY+paperButtonHeight ) {
-    paperButtonColour = yellow;
+    stroke(turquoise);
+    fill(yellow);
+    rect(paperButtonX, paperButtonY, paperButtonWidth, paperButtonHeight);
+    fill(resetWhite);
+    textAlign(CENTER, CENTER);
+    textFont(font, size);
+    text(paperButtonText, paperButtonX, paperButtonY, paperButtonWidth, paperButtonHeight);
+    
   } else {
-    paperButtonColour = resetWhite;
-  }//End Paper Button Hoverover
-
-  //
-
-  fill(paperButtonColour);
-  stroke(green);
-  rect(paperButtonX, paperButtonY, paperButtonHeight, paperButtonWidth);
-  stroke(reset);
-  fill(resetWhite); //White
-
-  //Text Paper Button
-  fill(black); //INK
-  textAlign(CENTER, CENTER);
-  textFont(font, size);
-  text(paperButtonText, paperButtonX, paperButtonY, paperButtonHeight, paperButtonWidth);
+    
+    stroke(green);
+    fill(resetWhite);
+    rect(paperButtonX, paperButtonY, paperButtonWidth, paperButtonHeight);
+    fill(black);
+    textAlign(CENTER, CENTER);
+    textFont(font, size);
+    text(paperButtonText, paperButtonX, paperButtonY, paperButtonWidth, paperButtonHeight);
+  }
+  fill(resetWhite);
 }
 //End PaperButton
 
@@ -65,7 +65,7 @@ void EllipseTool()
 {
   if ( mouseX>=ellipseButtonX && mouseX<=ellipseButtonX+ellipseButtonWidth && mouseY>=ellipseButtonY && mouseY<=ellipseButtonY+ellipseButtonHeight ) {
     stroke(turquoise);
-    fill(red);
+    fill(blue);
     rect(ellipseButtonX, ellipseButtonY, ellipseButtonWidth, ellipseButtonHeight);
     fill(resetWhite);
     textAlign(CENTER, CENTER);
@@ -81,6 +81,33 @@ void EllipseTool()
     textAlign(CENTER, CENTER);
     textFont(font, size);
     text(ellipseButtonText, ellipseButtonX, ellipseButtonY, ellipseButtonWidth, ellipseButtonHeight);
+  }
+  fill(resetWhite);
+}
+//End EllipseTool
+
+//
+
+void LineTool()
+{
+  if ( mouseX>=lineButtonX && mouseX<=lineButtonX+lineButtonWidth && mouseY>=lineButtonY && mouseY<=lineButtonY+lineButtonHeight ) {
+    stroke(turquoise);
+    fill(blue);
+    rect(lineButtonX, lineButtonY, lineButtonWidth, lineButtonHeight);
+    fill(resetWhite);
+    textAlign(CENTER, CENTER);
+    textFont(font, size);
+    text(lineButtonText, lineButtonX, lineButtonY, lineButtonWidth, lineButtonHeight);
+    
+  } else {
+    
+    stroke(green);
+    fill(resetWhite);
+    rect(lineButtonX, lineButtonY, lineButtonWidth, lineButtonHeight);
+    fill(black);
+    textAlign(CENTER, CENTER);
+    textFont(font, size);
+    text(lineButtonText, lineButtonX, lineButtonY, lineButtonWidth, lineButtonHeight);
   }
   fill(resetWhite);
 }
