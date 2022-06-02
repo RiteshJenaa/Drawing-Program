@@ -1,5 +1,4 @@
 //Global Variables
-float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight, drawingDiameter; 
 float paperButtonX, paperButtonY, paperButtonHeight, paperButtonWidth;
 Boolean paper=false;
 //
