@@ -2,14 +2,8 @@
 float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 float ellipseButtonX, ellipseButtonY, ellipseButtonWidth, ellipseButtonHeight;
 float lineButtonX, lineButtonY, lineButtonWidth, lineButtonHeight;
-float colorButtonX, colorButtonY, colorButtonWidth, colorButtonHeight;
-float greenButtonX, greenButtonY, greenButtonWidth, greenButtonHeight;
-float blueButtonX, blueButtonY, blueButtonWidth, blueButtonHeight;
-float redButtonX, redButtonY, redButtonWidth, redButtonHeight;
-float yellowButtonX, yellowButtonY, yellowButtonWidth, yellowButtonHeight;
-float orangeButtonX, orangeButtonY, orangeButtonWidth, orangeButtonHeight;
-float whiteButtonX, whiteButtonY, whiteButtonWidth, whiteButtonHeight;
-float grayButtonX, grayButtonY, grayButtonWidth, grayButtonHeight;
+float squareButtonX, squareButtonY, squareButtonWidth, squareButtonHeight;
+
 //
 
 void QuitButton() 
@@ -67,43 +61,6 @@ void PaperButton()
 
 //
 
-void colorSetup()
-{
-  if (colorButton == true) {
-    noStroke();
-    rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
-
-    fill(green);
-    rect( greenButtonX, greenButtonY, greenButtonWidth, greenButtonHeight ); 
-
-    fill(blue);
-    rect(blueButtonX, blueButtonY, blueButtonWidth, blueButtonHeight); 
-
-    fill(red);
-    rect(redButtonX, redButtonY, redButtonWidth, redButtonHeight); 
-
-    fill(yellow);
-    rect(yellowButtonX, yellowButtonY, yellowButtonWidth, yellowButtonHeight); 
-
-    fill(orange);
-    rect(orangeButtonX, orangeButtonY, orangeButtonWidth, orangeButtonHeight); 
-
-    fill(resetWhite);
-    rect(whiteButtonX, whiteButtonY, whiteButtonWidth, whiteButtonHeight); 
-
-    fill(gray);
-    rect(grayButtonX, grayButtonY, grayButtonWidth, grayButtonHeight);
-  }
-}
-//End ColorButton
-
-//
-
-void greenButton() {
-  if ( colorButton == true && mouseX>=greenButtonX && mouseX<=greenButtonX+greenButtonWidth && mouseY>=greenButtonY && mouseY<=greenButtonY+greenButtonHeight )
-  fill(red);
-  rect(drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight);
-}//End greenButton
 
 void EllipseTool()
 {
@@ -131,6 +88,31 @@ void EllipseTool()
 
 //
 
+void SquareTool()
+{
+  if ( mouseX>=squareButtonX && mouseX<=squareButtonX+squareButtonWidth && mouseY>=squareButtonY && mouseY<=squareButtonY+squareButtonHeight ) {
+    stroke(turquoise);
+    fill(blue);
+    rect(squareButtonX, squareButtonY, squareButtonWidth, squareButtonHeight);
+    fill(resetWhite);
+    textAlign(CENTER, CENTER);
+    textFont(font, size);
+    text(squareButtonText, squareButtonX, squareButtonY, squareButtonWidth, squareButtonHeight);
+  } else {
+
+    stroke(green);
+    fill(resetWhite);
+    rect(squareButtonX, squareButtonY, squareButtonWidth, squareButtonHeight);
+    fill(black);
+    textAlign(CENTER, CENTER);
+    textFont(font, size);
+    text(squareButtonText, squareButtonX, squareButtonY, squareButtonWidth, squareButtonHeight);
+  }
+  fill(resetWhite);
+}
+//End SquareTool
+
+//
 void LineTool()
 {
   if ( mouseX>=lineButtonX && mouseX<=lineButtonX+lineButtonWidth && mouseY>=lineButtonY && mouseY<=lineButtonY+lineButtonHeight ) {
