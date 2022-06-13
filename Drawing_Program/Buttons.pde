@@ -114,7 +114,7 @@ void SquareTool()
 
 //
 
-void TriangleTool()
+/*void TriangleTool()
 {
   if ( mouseX>=triangleButtonX && mouseX<=triangleButtonX+triangleButtonWidth && mouseY>=triangleButtonY && mouseY<=triangleButtonY+triangleButtonHeight ) {
     stroke(turquoise);
@@ -137,6 +137,7 @@ void TriangleTool()
   fill(resetWhite);
 }
 //End TriangleTool
+*/
 
 void LineTool()
 {
