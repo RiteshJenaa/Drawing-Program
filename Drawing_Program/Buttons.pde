@@ -113,6 +113,31 @@ void SquareTool()
 //End SquareTool
 
 //
+
+void TriangleTool()
+{
+  if ( mouseX>=triangleButtonX && mouseX<=triangleButtonX+triangleButtonWidth && mouseY>=triangleButtonY && mouseY<=triangleButtonY+triangleButtonHeight ) {
+    stroke(turquoise);
+    fill(blue);
+    rect(triangleButtonX, triangleButtonY, triangleButtonWidth, triangleButtonHeight);
+    fill(resetWhite);
+    textAlign(CENTER, CENTER);
+    textFont(font, size);
+    text(triangleButtonText, triangleButtonX, triangleButtonY, triangleButtonWidth, triangleButtonHeight);
+  } else {
+
+    stroke(green);
+    fill(resetWhite);
+    rect(triangleButtonX, triangleButtonY, triangleButtonWidth, triangleButtonHeight);
+    fill(black);
+    textAlign(CENTER, CENTER);
+    textFont(font, size);
+    text(triangleButtonText, triangleButtonX, triangleButtonY, triangleButtonWidth, triangleButtonHeight);
+  }
+  fill(resetWhite);
+}
+//End TriangleTool
+
 void LineTool()
 {
   if ( mouseX>=lineButtonX && mouseX<=lineButtonX+lineButtonWidth && mouseY>=lineButtonY && mouseY<=lineButtonY+lineButtonHeight ) {
