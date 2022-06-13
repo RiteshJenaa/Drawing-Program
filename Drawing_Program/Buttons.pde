@@ -164,5 +164,3 @@ void LineTool()
 //End EllipseTool
 
 //
-
-//Colour selector
