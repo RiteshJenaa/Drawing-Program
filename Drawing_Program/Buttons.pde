@@ -12,6 +12,7 @@ float loopButtonX, loopButtonY, loopButtonWidth, loopButtonHeight;
 float nextButtonX, nextButtonY, nextButtonWidth, nextButtonHeight;
 float backButtonX, backButtonY, backButtonWidth, backButtonHeight;
 float skipButtonX, skipButtonY, skipButtonWidth, skipButtonHeight;
+float amplifyButtonX, amplifyButtonY, amplifyButtonWidth, amplifyButtonHeight;
 
 //
 
@@ -371,3 +372,25 @@ void previousButton()
   fill(resetWhite);
 }
 //End previousButton
+
+void amplifyButton()
+{
+  if ( mouseX>=amplifyButtonX && mouseX<=amplifyButtonX+amplifyButtonWidth && mouseY>=amplifyButtonY && mouseY<=amplifyButtonY+amplifyButtonHeight ) {
+    stroke(turquoise);
+    fill(blue);
+    rect(amplifyButtonX, amplifyButtonY, amplifyButtonWidth, amplifyButtonHeight);
+    fill(resetWhite);
+    textAlign(CENTER, CENTER);
+    textFont(font, size);
+  } else {
+
+    stroke(green);
+    fill(resetWhite);
+    rect(amplifyButtonX, amplifyButtonY, amplifyButtonWidth, amplifyButtonHeight);
+    fill(black);
+    textAlign(CENTER, CENTER);
+    textFont(font, size);
+  }
+  fill(resetWhite);
+}
+//End amplifyButton

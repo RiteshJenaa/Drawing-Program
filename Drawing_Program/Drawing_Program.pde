@@ -94,6 +94,8 @@ void draw()
   backButton();
   //
   previousButton();
+  //
+  amplifyButton();
 
   //Drawing Tools
   fill(resetWhite);
@@ -328,9 +330,15 @@ void mousePressed()
       song[currentSong].play();
     }
   } //End Back Button
-  
-   if ( mouseX>=skipButtonX && mouseX<=skipButtonX+skipButtonWidth && mouseY>=skipButtonY && mouseY<=skipButtonY+skipButtonHeight ) previousSong(); //End Song Skip Button 
-     
+
+  if ( mouseX>=skipButtonX && mouseX<=skipButtonX+skipButtonWidth && mouseY>=skipButtonY && mouseY<=skipButtonY+skipButtonHeight ) previousSong(); //End Song Skip Button 
+
+  if ( mouseX>=amplifyButtonX && mouseX<=amplifyButtonX+amplifyButtonWidth && mouseY>=amplifyButtonY && mouseY<=amplifyButtonY+amplifyButtonHeight ) {
+    println("Gain is", song[currentSong].getGain());
+    gain = gain+song[currentSong].getGain();
+    song[currentSong].setGain(gain);
+  }
+  //End Amplify Button
 }//End mousepressed
 
 void mouseClicked()

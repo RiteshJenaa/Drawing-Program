@@ -79,5 +79,10 @@ void population()
   skipButtonY = nextButtonY;
   skipButtonWidth = muteButtonWidth;
   skipButtonHeight = muteButtonHeight;
+  //
+  amplifyButtonX = forwardButtonX;
+  amplifyButtonY = displayHeight*2.5/5;
+  amplifyButtonWidth = muteButtonWidth;
+  amplifyButtonHeight = muteButtonHeight;
 }
 //End population
