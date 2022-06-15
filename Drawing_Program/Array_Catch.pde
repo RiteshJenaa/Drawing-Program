@@ -30,7 +30,7 @@ void AutoPlay() {
 }
   //End AutoPlay
 
-  void SongSkip() {
+  void  previousSong() {
     if ( song[currentSong].isPlaying() && song[currentSong].position() == song[currentSong].length() - song[currentSong].length()*1/6 ) {
     } else {
       song[currentSong].pause();

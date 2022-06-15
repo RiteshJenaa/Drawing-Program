@@ -76,6 +76,24 @@ void draw()
   LineTool();
   //
   SquareTool();
+  //
+  playButton();
+  //
+  forwardButton();
+  //
+  reverseButton();
+  //
+  muteButton();
+  //
+  stopButton();
+  //
+  loopButton();
+  //
+  nextButton();
+  //
+  backButton();
+  //
+  previousButton();
 
   //Drawing Tools
   fill(resetWhite);
@@ -120,7 +138,7 @@ void draw()
   fill(255);
   //
   //Visualizer
-   fill(#000000);
+  fill(#000000);
   rect(displayWidth*0/5, displayHeight*0/5, displayWidth*1/6, displayHeight*1/6);
   for (int i = 0; i < song[currentSong].bufferSize() - 1; i++)
   {
@@ -227,7 +245,7 @@ void keyPressed()
 
   if (  key=='a' || key=='A' ) AutoPlay(); //End AutoPlay Button 
 
-  if (  key=='f' || key=='F' ) SongSkip(); //End Song Skip Button 
+  if (  key=='f' || key=='F' ) previousButton(); //End Song Skip Button 
   //Note it sometimes works
 }
 //End keyPressed
@@ -253,6 +271,66 @@ void mousePressed()
   if ( draw1=true && mouseX>=ellipseButtonX && mouseX<=ellipseButtonX+ellipseButtonWidth && mouseY>=ellipseButtonY && mouseY<=ellipseButtonY+ellipseButtonHeight ) ellipse( mouseX, mouseY, drawingDiameter, drawingDiameter );
   if ( draw2=true && mouseX>=squareButtonX && mouseX<=squareButtonX+squareButtonWidth && mouseY>=squareButtonY && mouseY<=squareButtonY+squareButtonHeight ) rect (  mouseX, mouseY, squareWidth, squareHeight );
   //
+  if ( mouseX>=playButtonX && mouseX<=playButtonX+playButtonWidth && mouseY>=playButtonY && mouseY<=playButtonY+playButtonHeight ) {     
+    if ( song[currentSong].isPlaying() ) {
+      song[currentSong].pause();
+    } else if ( song[currentSong].position() >= song[currentSong].length() - song[currentSong].length()*1/6 ) { //Special situation
+      song[currentSong].rewind();
+      song[currentSong].play();
+    } else {
+      song[currentSong].play();
+    }
+  }//End Play-Paused button
+
+  if ( mouseX>=reverseButtonX && mouseX<=reverseButtonX+reverseButtonWidth && mouseY>=reverseButtonY && mouseY<=reverseButtonY+reverseButtonHeight ) song[currentSong].skip(-1000);
+  if ( mouseX>=forwardButtonX && mouseX<=forwardButtonX+forwardButtonWidth && mouseY>=forwardButtonY && mouseY<=forwardButtonY+forwardButtonHeight ) song[currentSong].skip(1000);
+
+  if ( mouseX>=muteButtonX && mouseX<=muteButtonX+muteButtonWidth && mouseY>=muteButtonY && mouseY<=muteButtonY+muteButtonHeight ) { //Mute
+    if ( song[currentSong].isMuted() ) {
+      song[currentSong].unmute();
+    } else {
+      song[currentSong].mute();
+    }
+  }//End Mute
+
+  if ( mouseX>=stopButtonX && mouseX<=stopButtonX+stopButtonWidth && mouseY>=stopButtonY && mouseY<=stopButtonY+stopButtonHeight ) {    
+    if ( song[currentSong].isPlaying() ) {
+      song[currentSong].pause();
+      song[currentSong].rewind();
+    } else {
+      song[currentSong].rewind();
+    }
+  }//End STOP button
+
+  if ( mouseX>=loopButtonX && mouseX<=loopButtonX+loopButtonWidth && mouseY>=loopButtonY && mouseY<=loopButtonY+loopButtonHeight ) song[currentSong].loop();
+  if ( mouseX>=nextButtonX && mouseX<=nextButtonX+nextButtonWidth && mouseY>=nextButtonY && mouseY<=nextButtonY+nextButtonHeight ) {
+    if ( song [currentSong].isPlaying() ) {
+      song[currentSong].pause();
+      song[currentSong].rewind();
+      nextButtonArrayCatch();
+      song[currentSong].play();
+    } else {
+      song[currentSong].rewind();
+      nextButtonArrayCatch();
+      song[currentSong].play();
+    }
+  }//End Next Button
+
+  if ( mouseX>=backButtonX && mouseX<=backButtonX+backButtonWidth && mouseY>=backButtonY && mouseY<=backButtonY+backButtonHeight ) {
+    if ( song [currentSong].isPlaying() ) {
+      song[currentSong].pause();
+      song[currentSong].rewind();
+      backButtonArrayCatch();
+      song[currentSong].play();
+    } else {
+      song[currentSong].rewind();
+      backButtonArrayCatch();
+      song[currentSong].play();
+    }
+  } //End Back Button
+  
+   if ( mouseX>=skipButtonX && mouseX<=skipButtonX+skipButtonWidth && mouseY>=skipButtonY && mouseY<=skipButtonY+skipButtonHeight ) previousSong(); //End Song Skip Button 
+     
 }//End mousepressed
 
 void mouseClicked()

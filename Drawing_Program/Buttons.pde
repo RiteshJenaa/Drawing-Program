@@ -3,6 +3,15 @@ float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
 float ellipseButtonX, ellipseButtonY, ellipseButtonWidth, ellipseButtonHeight;
 float lineButtonX, lineButtonY, lineButtonWidth, lineButtonHeight;
 float squareButtonX, squareButtonY, squareButtonWidth, squareButtonHeight;
+float playButtonX, playButtonY, playButtonWidth, playButtonHeight;
+float reverseButtonX, reverseButtonY, reverseButtonWidth, reverseButtonHeight;
+float forwardButtonX, forwardButtonY, forwardButtonWidth, forwardButtonHeight;
+float muteButtonX, muteButtonY, muteButtonWidth, muteButtonHeight;
+float stopButtonX, stopButtonY, stopButtonWidth, stopButtonHeight;
+float loopButtonX, loopButtonY, loopButtonWidth, loopButtonHeight;
+float nextButtonX, nextButtonY, nextButtonWidth, nextButtonHeight;
+float backButtonX, backButtonY, backButtonWidth, backButtonHeight;
+float skipButtonX, skipButtonY, skipButtonWidth, skipButtonHeight;
 
 //
 
@@ -115,29 +124,29 @@ void SquareTool()
 //
 
 /*void TriangleTool()
-{
-  if ( mouseX>=triangleButtonX && mouseX<=triangleButtonX+triangleButtonWidth && mouseY>=triangleButtonY && mouseY<=triangleButtonY+triangleButtonHeight ) {
-    stroke(turquoise);
-    fill(blue);
-    rect(triangleButtonX, triangleButtonY, triangleButtonWidth, triangleButtonHeight);
-    fill(resetWhite);
-    textAlign(CENTER, CENTER);
-    textFont(font, size);
-    text(triangleButtonText, triangleButtonX, triangleButtonY, triangleButtonWidth, triangleButtonHeight);
-  } else {
-
-    stroke(green);
-    fill(resetWhite);
-    rect(triangleButtonX, triangleButtonY, triangleButtonWidth, triangleButtonHeight);
-    fill(black);
-    textAlign(CENTER, CENTER);
-    textFont(font, size);
-    text(triangleButtonText, triangleButtonX, triangleButtonY, triangleButtonWidth, triangleButtonHeight);
-  }
-  fill(resetWhite);
-}
-//End TriangleTool
-*/
+ {
+ if ( mouseX>=triangleButtonX && mouseX<=triangleButtonX+triangleButtonWidth && mouseY>=triangleButtonY && mouseY<=triangleButtonY+triangleButtonHeight ) {
+ stroke(turquoise);
+ fill(blue);
+ rect(triangleButtonX, triangleButtonY, triangleButtonWidth, triangleButtonHeight);
+ fill(resetWhite);
+ textAlign(CENTER, CENTER);
+ textFont(font, size);
+ text(triangleButtonText, triangleButtonX, triangleButtonY, triangleButtonWidth, triangleButtonHeight);
+ } else {
+ 
+ stroke(green);
+ fill(resetWhite);
+ rect(triangleButtonX, triangleButtonY, triangleButtonWidth, triangleButtonHeight);
+ fill(black);
+ textAlign(CENTER, CENTER);
+ textFont(font, size);
+ text(triangleButtonText, triangleButtonX, triangleButtonY, triangleButtonWidth, triangleButtonHeight);
+ }
+ fill(resetWhite);
+ }
+ //End TriangleTool
+ */
 
 void LineTool()
 {
@@ -161,6 +170,204 @@ void LineTool()
   }
   fill(resetWhite);
 }
-//End EllipseTool
+//End LineTool
 
 //
+
+void playButton()
+{
+  if ( mouseX>=playButtonX && mouseX<=playButtonX+playButtonWidth && mouseY>=playButtonY && mouseY<=playButtonY+playButtonHeight ) {
+    stroke(turquoise);
+    fill(blue);
+    rect(playButtonX, playButtonY, playButtonWidth, playButtonHeight);
+    fill(resetWhite);
+    textAlign(CENTER, CENTER);
+    textFont(font, size);
+  } else {
+
+    stroke(green);
+    fill(resetWhite);
+    rect(playButtonX, playButtonY, playButtonWidth, playButtonHeight);
+    fill(black);
+    textAlign(CENTER, CENTER);
+    textFont(font, size);
+  }
+  fill(resetWhite);
+}
+//End playButton
+
+void forwardButton()
+{
+  if ( mouseX>=forwardButtonX && mouseX<=forwardButtonX+forwardButtonWidth && mouseY>=forwardButtonY && mouseY<=forwardButtonY+forwardButtonHeight ) {
+    stroke(turquoise);
+    fill(blue);
+    rect(forwardButtonX, forwardButtonY, forwardButtonWidth, forwardButtonHeight);
+    fill(resetWhite);
+    textAlign(CENTER, CENTER);
+    textFont(font, size);
+  } else {
+
+    stroke(green);
+    fill(resetWhite);
+    rect(forwardButtonX, forwardButtonY, forwardButtonWidth, forwardButtonHeight);
+    fill(black);
+    textAlign(CENTER, CENTER);
+    textFont(font, size);
+  }
+  fill(resetWhite);
+}
+//End forwardButton
+
+void reverseButton()
+{
+  if ( mouseX>=reverseButtonX && mouseX<=reverseButtonX+reverseButtonWidth && mouseY>=reverseButtonY && mouseY<=reverseButtonY+reverseButtonHeight ) {
+    stroke(turquoise);
+    fill(blue);
+    rect(reverseButtonX, reverseButtonY, reverseButtonWidth, reverseButtonHeight);
+    fill(resetWhite);
+    textAlign(CENTER, CENTER);
+    textFont(font, size);
+  } else {
+
+    stroke(green);
+    fill(resetWhite);
+    rect(reverseButtonX, reverseButtonY, reverseButtonWidth, reverseButtonHeight);
+    fill(black);
+    textAlign(CENTER, CENTER);
+    textFont(font, size);
+  }
+  fill(resetWhite);
+}
+//End reverseButton
+
+void muteButton()
+{
+  if ( mouseX>=muteButtonX && mouseX<=muteButtonX+muteButtonWidth && mouseY>=muteButtonY && mouseY<=muteButtonY+muteButtonHeight ) {
+    stroke(turquoise);
+    fill(blue);
+    rect(muteButtonX, muteButtonY, muteButtonWidth, muteButtonHeight);
+    fill(resetWhite);
+    textAlign(CENTER, CENTER);
+    textFont(font, size);
+  } else {
+
+    stroke(green);
+    fill(resetWhite);
+    rect(muteButtonX, muteButtonY, muteButtonWidth, muteButtonHeight);
+    fill(black);
+    textAlign(CENTER, CENTER);
+    textFont(font, size);
+  }
+  fill(resetWhite);
+}
+//End muteButton
+
+void stopButton()
+{
+  if ( mouseX>=stopButtonX && mouseX<=stopButtonX+stopButtonWidth && mouseY>=stopButtonY && mouseY<=stopButtonY+stopButtonHeight ) {
+    stroke(turquoise);
+    fill(blue);
+    rect(stopButtonX, stopButtonY, stopButtonWidth, stopButtonHeight);
+    fill(resetWhite);
+    textAlign(CENTER, CENTER);
+    textFont(font, size);
+  } else {
+
+    stroke(green);
+    fill(resetWhite);
+    rect(stopButtonX, stopButtonY, stopButtonWidth, stopButtonHeight);
+    fill(black);
+    textAlign(CENTER, CENTER);
+    textFont(font, size);
+  }
+  fill(resetWhite);
+}
+//End stopButton
+
+void loopButton()
+{
+  if ( mouseX>=loopButtonX && mouseX<=loopButtonX+loopButtonWidth && mouseY>=loopButtonY && mouseY<=loopButtonY+loopButtonHeight ) {
+    stroke(turquoise);
+    fill(blue);
+    rect(loopButtonX, loopButtonY, loopButtonWidth, loopButtonHeight);
+    fill(resetWhite);
+    textAlign(CENTER, CENTER);
+    textFont(font, size);
+  } else {
+
+    stroke(green);
+    fill(resetWhite);
+    rect(loopButtonX, loopButtonY, loopButtonWidth, loopButtonHeight);
+    fill(black);
+    textAlign(CENTER, CENTER);
+    textFont(font, size);
+  }
+  fill(resetWhite);
+}
+//End loopButton
+
+void nextButton()
+{
+  if ( mouseX>=nextButtonX && mouseX<=nextButtonX+nextButtonWidth && mouseY>=nextButtonY && mouseY<=nextButtonY+nextButtonHeight ) {
+    stroke(turquoise);
+    fill(blue);
+    rect(nextButtonX, nextButtonY, nextButtonWidth, nextButtonHeight);
+    fill(resetWhite);
+    textAlign(CENTER, CENTER);
+    textFont(font, size);
+  } else {
+
+    stroke(green);
+    fill(resetWhite);
+    rect(nextButtonX, nextButtonY, nextButtonWidth, nextButtonHeight);
+    fill(black);
+    textAlign(CENTER, CENTER);
+    textFont(font, size);
+  }
+  fill(resetWhite);
+}
+//End nextButton
+
+void backButton()
+{
+  if ( mouseX>=backButtonX && mouseX<=backButtonX+backButtonWidth && mouseY>=backButtonY && mouseY<=backButtonY+backButtonHeight ) {
+    stroke(turquoise);
+    fill(blue);
+    rect(backButtonX, backButtonY, backButtonWidth, backButtonHeight);
+    fill(resetWhite);
+    textAlign(CENTER, CENTER);
+    textFont(font, size);
+  } else {
+
+    stroke(green);
+    fill(resetWhite);
+    rect(backButtonX, backButtonY, backButtonWidth, backButtonHeight);
+    fill(black);
+    textAlign(CENTER, CENTER);
+    textFont(font, size);
+  }
+  fill(resetWhite);
+}
+//End nextButton
+
+void previousButton()
+{
+  if ( mouseX>=skipButtonX && mouseX<=skipButtonX+skipButtonWidth && mouseY>=skipButtonY && mouseY<=skipButtonY+skipButtonHeight ) {
+    stroke(turquoise);
+    fill(blue);
+    rect(skipButtonX, skipButtonY, skipButtonWidth, skipButtonHeight);
+    fill(resetWhite);
+    textAlign(CENTER, CENTER);
+    textFont(font, size);
+  } else {
+
+    stroke(green);
+    fill(resetWhite);
+    rect(skipButtonX, skipButtonY, skipButtonWidth, skipButtonHeight);
+    fill(black);
+    textAlign(CENTER, CENTER);
+    textFont(font, size);
+  }
+  fill(resetWhite);
+}
+//End previousButton

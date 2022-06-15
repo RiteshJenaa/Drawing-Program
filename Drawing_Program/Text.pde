@@ -5,7 +5,7 @@ String quitButtonText = "QUIT";
 String paperButtonText = "Reset Paper";
 String ellipseButtonText = "Ellipse Pattern";
 String lineButtonText = "Pencil Tool";
-String squareButtonText = "Square";
+String squareButtonText = "Square Pattern";
 //
 void textSetup()
 {
