@@ -25,6 +25,18 @@ float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeigh
 
 color resetWhite=#FFFFFF, red=#FF0A03, green=#72F04D, yellow=#ECF04D, black=0, gold= #FFD700, turquoise= #AFEEEE, blue= #005477, orange = #ffa500, gray = #808080, quitButtonColour, paperButtonColour;
 //
+float rectXPic1, rectYPic1, rectWidthPic1, rectHeightPic1;
+float rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2;
+float rectXPic3, rectYPic3, rectWidthPic3, rectHeightPic3;
+float rectXPic4, rectYPic4, rectWidthPic4, rectHeightPic4;
+float rectXPic5, rectYPic5, rectWidthPic5, rectHeightPic5;
+float rectXPic6, rectYPic6, rectWidthPic6, rectHeightPic6;
+float rectXPic7, rectYPic7, rectWidthPic7, rectHeightPic7;
+float rectXPic8, rectYPic8, rectWidthPic8, rectHeightPic8;
+float rectXPic9, rectYPic9, rectWidthPic9, rectHeightPic9;
+float rectXPic10, rectYPic10, rectWidthPic10, rectHeightPic10;
+PImage pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8, pic9, pic10;
+
 void setup()
 {
   //Mandatory: Mistaken display orientation should break app, feedback to console and CANVAS
@@ -59,6 +71,8 @@ void setup()
   println( "Author: ", songMetaData[currentSong].author() ); 
   println( "Album: ", songMetaData[currentSong].album() );
   println( "Genre: ", songMetaData[currentSong].genre() );
+
+  Images();
 }
 //End setup
 
@@ -96,6 +110,9 @@ void draw()
   previousButton();
   //
   amplifyButton();
+  //
+  picDraw();
+  //
 
   //Drawing Tools
   fill(resetWhite);

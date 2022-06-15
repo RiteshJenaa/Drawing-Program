@@ -81,8 +81,58 @@ void population()
   skipButtonHeight = muteButtonHeight;
   //
   amplifyButtonX = forwardButtonX;
-  amplifyButtonY = displayHeight*2.5/5;
+  amplifyButtonY = displayHeight*2.65/5;
   amplifyButtonWidth = muteButtonWidth;
   amplifyButtonHeight = muteButtonHeight;
+  //
+  rectXPic1 = displayWidth*4.4/5;
+  rectYPic1 = displayHeight*4.2/5;
+  rectWidthPic1 = displayWidth*1/20;
+  rectHeightPic1 = displayHeight*1/20;
+  //
+  rectXPic2 = reverseButtonX;
+  rectYPic2 = reverseButtonY;
+  rectWidthPic2 = reverseButtonWidth;
+  rectHeightPic2 = reverseButtonHeight;
+  //
+  rectXPic3 = forwardButtonX;
+  rectYPic3 = forwardButtonY;
+  rectWidthPic3 = forwardButtonWidth;
+  rectHeightPic3 = forwardButtonHeight;
+  //
+  rectXPic4 = muteButtonX;
+  rectYPic4 = muteButtonY;
+  rectWidthPic4 = muteButtonWidth;
+  rectHeightPic4 = muteButtonHeight;
+  //
+  rectXPic5 = stopButtonX;
+  rectYPic5 = stopButtonY;
+  rectWidthPic5 = stopButtonWidth;
+  rectHeightPic5 = stopButtonHeight;
+  //
+  rectXPic6 = loopButtonX;
+  rectYPic6 = loopButtonY;
+  rectWidthPic6 = loopButtonWidth;
+  rectHeightPic6 = loopButtonHeight;
+  //
+  rectXPic7 = nextButtonX;
+  rectYPic7 = nextButtonY;
+  rectWidthPic7 = nextButtonWidth;
+  rectHeightPic7 = nextButtonHeight;
+  //
+  rectXPic8 = backButtonX;
+  rectYPic8 = backButtonY;
+  rectWidthPic8 = backButtonWidth;
+  rectHeightPic8 = backButtonHeight;
+  //
+  rectXPic9 = skipButtonX;
+  rectYPic9 = skipButtonY;
+  rectWidthPic9 = skipButtonWidth;
+  rectHeightPic9 = skipButtonHeight;
+  //
+  rectXPic10 = amplifyButtonX;
+  rectYPic10 = amplifyButtonY;
+  rectWidthPic10 = amplifyButtonWidth;
+  rectHeightPic10 = amplifyButtonHeight;
 }
 //End population
