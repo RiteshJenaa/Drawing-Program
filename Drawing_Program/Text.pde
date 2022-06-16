@@ -6,6 +6,7 @@ String paperButtonText = "Reset Paper";
 String ellipseButtonText = "Ellipse Pattern";
 String lineButtonText = "Pencil Tool";
 String squareButtonText = "Square Pattern";
+String eraser = "Eraser";
 //
 void textSetup()
 {

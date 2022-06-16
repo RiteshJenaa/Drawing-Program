@@ -442,3 +442,30 @@ void amplifyButton()
   fill(resetWhite);
 }
 //End amplifyButton
+
+void eraserButton()
+{
+  if ( mouseX>=eraserButtonX && mouseX<=eraserButtonX+eraserButtonWidth && mouseY>=eraserButtonY && mouseY<=eraserButtonY+eraserButtonHeight) {
+    stroke(turquoise);
+    fill(blue);
+    rect(eraserButtonX, eraserButtonY, eraserButtonWidth, eraserButtonHeight);
+    fill(resetWhite);
+    textAlign(CENTER, CENTER);
+    textFont(font, size);
+    text(eraser, eraserButtonX, eraserButtonY, eraserButtonWidth, eraserButtonHeight);
+    soundEffect.pause();
+    soundEffect.rewind();
+    soundEffect.play();
+  } else {
+
+    stroke(green);
+    fill(resetWhite);
+    rect(eraserButtonX, eraserButtonY, eraserButtonWidth, eraserButtonHeight);
+    fill(black);
+    textAlign(CENTER, CENTER);
+    textFont(font, size);
+    text(eraser, eraserButtonX, eraserButtonY, eraserButtonWidth, eraserButtonHeight);
+  }
+  fill(resetWhite);
+}
+//End eraserButton

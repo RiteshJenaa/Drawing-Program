@@ -19,10 +19,10 @@ color purple = #E60AFF;
 PFont titleFont;
 float gain = 20.0;
 
-Boolean draw=false, draw1=false, draw2=false, colorButton=false;
+Boolean draw=false, draw1=false, draw2=false, draw3=false;
 int reset=1;
 int squareWidth, squareHeight ;
-float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight, drawingDiameter; 
+float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight, drawingDiameter, drawingDiameter1; 
 
 color resetWhite=#FFFFFF, red=#FF0A03, green=#72F04D, yellow=#ECF04D, black=0, gold= #FFD700, turquoise= #AFEEEE, blue= #005477, orange = #ffa500, gray = #808080, quitButtonColour, paperButtonColour;
 //
@@ -36,7 +36,9 @@ float rectXPic7, rectYPic7, rectWidthPic7, rectHeightPic7;
 float rectXPic8, rectYPic8, rectWidthPic8, rectHeightPic8;
 float rectXPic9, rectYPic9, rectWidthPic9, rectHeightPic9;
 float rectXPic10, rectYPic10, rectWidthPic10, rectHeightPic10;
+float eraserButtonX, eraserButtonY, eraserButtonWidth, eraserButtonHeight;
 PImage pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8, pic9, pic10;
+
 
 void setup()
 {
@@ -73,7 +75,7 @@ void setup()
   println( "Album: ", songMetaData[currentSong].album() );
   println( "Genre: ", songMetaData[currentSong].genre() );
 
-soundEffect = minim.loadFile("MusicDownload/Beep.mp3");
+  soundEffect = minim.loadFile("MusicDownload/Beep.mp3");
   Images();
 }
 //End setup
@@ -113,15 +115,22 @@ void draw()
   //
   amplifyButton();
   //
+  eraserButton();
+  //
   picDraw();
   //
 
   //Drawing Tools
   fill(resetWhite);
+  stroke(black);
   if ( draw==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight) line( mouseX, mouseY, pmouseX, pmouseY );  //End Line Draw
+  stroke(red);
   if ( draw1==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight) ellipse( mouseX, mouseY, drawingDiameter, drawingDiameter );
+  stroke(green);
   if ( draw2==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight) rect (  mouseX, mouseY, squareWidth, squareHeight );
-  //
+  noStroke();
+  if ( draw3==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<=drawingSurfaceY+drawingSurfaceHeight) ellipse ( mouseX, mouseY, drawingDiameter1, drawingDiameter1 );
+
 
   //if ( song[currentSong].isLooping() ) println("There are", song[currentSong].loopCount()-1, "loops left.");
   //if ( song[currentSong].isPlaying() && !song[currentSong].isLooping() ) println("Play Once");
@@ -129,6 +138,7 @@ void draw()
   //println("Computer Number of Current Song:", currentSong);
   println("Song Position", song[currentSong].position(), "Song Length", song[currentSong].length() );
   //
+  stroke(turquoise);
   rect(displayWidth*4/5, displayHeight*3/5, displayWidth*1/5, displayHeight*1/20);
   fill(purple);
   textAlign (CENTER, CENTER); 
@@ -173,8 +183,9 @@ void draw()
   float posx = map(song[currentSong].position(), 0, song[currentSong].length(), 50, 250);
   stroke(0, 200, 0);
   line(posx, 0, posx, 180);
-  //End visualizer
 }
+//End visualizer
+
 //End draw
 
 void keyPressed()
@@ -291,6 +302,7 @@ void mousePressed()
   if ( draw=true && mouseX>=lineButtonX && mouseX<=lineButtonX+lineButtonWidth && mouseY>=lineButtonY && mouseY<=lineButtonY+lineButtonHeight ) line( mouseX, mouseY, pmouseX, pmouseY ); 
   if ( draw1=true && mouseX>=ellipseButtonX && mouseX<=ellipseButtonX+ellipseButtonWidth && mouseY>=ellipseButtonY && mouseY<=ellipseButtonY+ellipseButtonHeight ) ellipse( mouseX, mouseY, drawingDiameter, drawingDiameter );
   if ( draw2=true && mouseX>=squareButtonX && mouseX<=squareButtonX+squareButtonWidth && mouseY>=squareButtonY && mouseY<=squareButtonY+squareButtonHeight ) rect (  mouseX, mouseY, squareWidth, squareHeight );
+  if ( draw3=true && mouseX>=eraserButtonX && mouseX<=eraserButtonX+eraserButtonWidth && mouseY>=eraserButtonY && mouseY<=eraserButtonY+eraserButtonHeight) ellipse ( mouseX, mouseY, drawingDiameter1, drawingDiameter1 );
   //
   if ( mouseX>=playButtonX && mouseX<=playButtonX+playButtonWidth && mouseY>=playButtonY && mouseY<=playButtonY+playButtonHeight ) {     
     if ( song[currentSong].isPlaying() ) {
@@ -359,11 +371,6 @@ void mousePressed()
   }
   //End Amplify Button
 }//End mousepressed
-
-void mouseClicked()
-{
-}
-//End mouseClicked
 
 //
 

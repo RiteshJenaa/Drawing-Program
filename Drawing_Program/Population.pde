@@ -6,6 +6,7 @@ void population()
   drawingSurfaceWidth = displayWidth*4/5;
   drawingSurfaceHeight = displayHeight;
   drawingDiameter = displayWidth*1/80;
+  drawingDiameter1 = displayWidth*1/30;
   //
   quitButtonX = displayWidth*4/5;
   quitButtonY = displayHeight*0;
@@ -134,5 +135,10 @@ void population()
   rectYPic10 = amplifyButtonY;
   rectWidthPic10 = amplifyButtonWidth;
   rectHeightPic10 = amplifyButtonHeight;
+  //
+  eraserButtonX = displayWidth*4.5/5;
+  eraserButtonY = displayHeight*0;
+  eraserButtonWidth = quitButtonWidth;
+  eraserButtonHeight = quitButtonHeight;
 }
 //End population
