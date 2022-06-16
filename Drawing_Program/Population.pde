@@ -146,7 +146,7 @@ void population()
   greenButtonWidth = displayWidth*1/20;
   greenButtonHeight = displayHeight*1/20;
   //
-  blueButtonX = displayWidth*4.26/5;
+  blueButtonX = displayWidth*4.5/5;
   blueButtonY = greenButtonY;
   blueButtonWidth = greenButtonWidth;
   blueButtonHeight = greenButtonHeight;

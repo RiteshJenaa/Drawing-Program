@@ -406,28 +406,12 @@ void greenSetupButton()
   
   }
 }
-//End greenSetupButton
+
+void redSetupButton()
 
 void greenButton() {
 
 }//End greenButton
-
-void blueSetupButton()
-{
-  if (mouseX>=blueButtonX && mouseX<=blueButtonX+blueButtonWidth && mouseY>=blueButtonY && mouseY<=blueButtonY+blueButtonHeight) {
-    noStroke();
-    fill(blue);
-    rect(blueButtonX, blueButtonY, blueButtonWidth, blueButtonHeight);
-  } else {
-
-    noStroke();
-    fill(turquoise);
-    rect(blueButtonX, blueButtonY, blueButtonWidth, blueButtonHeight);
-  }
-}
-//End blueSetupButton
-
-void redSetupButton()
 {
   if (mouseX>=redButtonX && mouseX<=redButtonX+redButtonWidth && mouseY>=redButtonY && mouseY<=redButtonY+redButtonHeight) {
     noStroke();
