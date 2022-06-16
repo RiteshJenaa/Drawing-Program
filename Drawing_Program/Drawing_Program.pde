@@ -19,7 +19,7 @@ color purple = #E60AFF;
 PFont titleFont;
 float gain = 20.0;
 
-Boolean draw=false, draw1=false, draw2=false, draw3=false, turnONgreen = false, turnONstroke = false, turnONblue=false;
+Boolean draw=false, draw1=false, draw2=false, draw3=false, turnONgreen = false, turnONstroke = false, turnONblue=false, turnONred=false;
 int reset=1;
 int squareWidth, squareHeight ;
 float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight, drawingDiameter, drawingDiameter1; 
@@ -329,73 +329,73 @@ void draw()
   //
   //
 
-  if (turnONblue==true) {
+  if (turnONred==true) {
 
-    fill(turquoise);
-    stroke(turquoise);
+    fill(red);
+    stroke(red);
     if (draw==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<= drawingSurfaceY+drawingSurfaceHeight)  
       if (draw==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<= drawingSurfaceY+drawingSurfaceHeight) line( mouseX, mouseY, pmouseX, pmouseY );
   } //End Line Draw
   //
-  if (turnONblue==true) {
+  if (turnONred==true) {
 
-    fill(turquoise);
-    noStroke();
+    fill(red);
+    stroke(red);
     if (draw1==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<= drawingSurfaceY+drawingSurfaceHeight)  
       if (draw1==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<= drawingSurfaceY+drawingSurfaceHeight) ellipse( mouseX, mouseY, drawingDiameter, drawingDiameter );
   }
-  if (turnONblue==true) {
+  if (turnONred==true) {
 
-    fill(turquoise);
-    noStroke();
+    fill(red);
+    stroke(red);
     if (draw2==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<= drawingSurfaceY+drawingSurfaceHeight)  
       if (draw2==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<= drawingSurfaceY+drawingSurfaceHeight) rect (  mouseX, mouseY, squareWidth, squareHeight );
   }
   //
-  if (mouseX>=blueButtonX && mouseX<=blueButtonX+blueButtonWidth && mouseY>=blueButtonY && mouseY<=blueButtonY+blueButtonHeight) {
-    println("Blue Button Enabled");
-    if (turnONblue==false) {
-      turnONblue=true;
+  if (mouseX>=redButtonX && mouseX<=redButtonX+redButtonWidth && mouseY>=redButtonY && mouseY<=redButtonY+redButtonHeight) {
+    println("Red Button Enabled");
+    if (turnONred==false) {
+      turnONred=true;
     } else {
-      turnONblue=false;
+      turnONred=false;
     }
   }
-  if (mouseX>=blueButtonX && mouseX<=blueButtonX+blueButtonWidth && mouseY>=blueButtonY && mouseY<=blueButtonY+blueButtonHeight) {
+  if (mouseX>=redButtonX && mouseX<=redButtonX+redButtonWidth && mouseY>=redButtonY && mouseY<=redButtonY+redButtonHeight) {
     noStroke();
-    fill(blue);
-    rect(blueButtonX, blueButtonY, blueButtonWidth, blueButtonHeight);
+    fill(red);
+    rect(redButtonX, redButtonY, redButtonWidth, redButtonHeight);
   } else {
 
     noStroke();
-    fill(turquoise);
-    rect(blueButtonX, blueButtonY, blueButtonWidth, blueButtonHeight);
+    fill(Darkred);
+    rect(redButtonX, redButtonY, redButtonWidth, redButtonHeight);
   }
   //
-  if (turnONblue==true) {
+  if (turnONred==true) {
 
-    fill(blue);
+    fill(red);
     noStroke();
-    rect(blueButtonX, blueButtonY, blueButtonWidth, blueButtonHeight);
+    rect(redButtonX, redButtonY, redButtonWidth, redButtonHeight);
   } else {
     fill(turquoise);
-    rect(blueButtonX, blueButtonY, blueButtonWidth, blueButtonHeight);
+    rect(redButtonX, redButtonY, redButtonWidth, redButtonHeight);
   }//
 
   if (turnONstroke==true) {
-    fill(turquoise);
-    colorMode(turquoise);
-    rect(blueButtonX, blueButtonY, blueButtonWidth, blueButtonHeight);
+    fill(red);
+    colorMode(red);
+    rect(redButtonX, redButtonY, redButtonWidth, redButtonHeight);
     fill(resetWhite);
   }
 
-  if (turnONblue==true) {
+  if (turnONred==true) {
 
-    fill(blue);
+    fill(red);
     noStroke();
-    rect(blueButtonX, blueButtonY, blueButtonWidth, blueButtonHeight);
+    rect(redButtonX, redButtonY, redButtonWidth, redButtonHeight);
   } else {
     fill(turquoise);
-    rect(blueButtonX, blueButtonY, blueButtonWidth, blueButtonHeight);
+    rect(redButtonX, redButtonY, redButtonWidth, redButtonHeight);
   }//
 }
 
