@@ -29,6 +29,9 @@ void QuitButton()
     textAlign(CENTER, CENTER);
     textFont(font, size);
     text(quitButtonText, quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
+    soundEffect.pause();
+    soundEffect.rewind();
+    soundEffect.play();
   } else {
 
     stroke(green);
@@ -55,6 +58,9 @@ void PaperButton()
     textAlign(CENTER, CENTER);
     textFont(font, size);
     text(paperButtonText, paperButtonX, paperButtonY, paperButtonWidth, paperButtonHeight);
+    soundEffect.pause();
+    soundEffect.rewind();
+    soundEffect.play();
   } else {
 
     stroke(green);
@@ -82,6 +88,9 @@ void EllipseTool()
     textAlign(CENTER, CENTER);
     textFont(font, size);
     text(ellipseButtonText, ellipseButtonX, ellipseButtonY, ellipseButtonWidth, ellipseButtonHeight);
+    soundEffect.pause();
+    soundEffect.rewind();
+    soundEffect.play();
   } else {
 
     stroke(green);
@@ -108,6 +117,9 @@ void SquareTool()
     textAlign(CENTER, CENTER);
     textFont(font, size);
     text(squareButtonText, squareButtonX, squareButtonY, squareButtonWidth, squareButtonHeight);
+    soundEffect.pause();
+    soundEffect.rewind();
+    soundEffect.play();
   } else {
 
     stroke(green);
@@ -134,6 +146,9 @@ void SquareTool()
  textAlign(CENTER, CENTER);
  textFont(font, size);
  text(triangleButtonText, triangleButtonX, triangleButtonY, triangleButtonWidth, triangleButtonHeight);
+ soundEffect.pause();
+ soundEffect.rewind();
+ soundEffect.play();
  } else {
  
  stroke(green);
@@ -159,6 +174,9 @@ void LineTool()
     textAlign(CENTER, CENTER);
     textFont(font, size);
     text(lineButtonText, lineButtonX, lineButtonY, lineButtonWidth, lineButtonHeight);
+    soundEffect.pause();
+    soundEffect.rewind();
+    soundEffect.play();
   } else {
 
     stroke(green);
@@ -184,6 +202,9 @@ void playButton()
     fill(resetWhite);
     textAlign(CENTER, CENTER);
     textFont(font, size);
+    soundEffect.pause();
+    soundEffect.rewind();
+    soundEffect.play();
   } else {
 
     stroke(green);
@@ -206,6 +227,9 @@ void forwardButton()
     fill(resetWhite);
     textAlign(CENTER, CENTER);
     textFont(font, size);
+    soundEffect.pause();
+    soundEffect.rewind();
+    soundEffect.play();
   } else {
 
     stroke(green);
@@ -228,6 +252,9 @@ void reverseButton()
     fill(resetWhite);
     textAlign(CENTER, CENTER);
     textFont(font, size);
+    soundEffect.pause();
+    soundEffect.rewind();
+    soundEffect.play();
   } else {
 
     stroke(green);
@@ -250,6 +277,9 @@ void muteButton()
     fill(resetWhite);
     textAlign(CENTER, CENTER);
     textFont(font, size);
+    soundEffect.pause();
+    soundEffect.rewind();
+    soundEffect.play();
   } else {
 
     stroke(green);
@@ -272,6 +302,9 @@ void stopButton()
     fill(resetWhite);
     textAlign(CENTER, CENTER);
     textFont(font, size);
+    soundEffect.pause();
+    soundEffect.rewind();
+    soundEffect.play();
   } else {
 
     stroke(green);
@@ -294,6 +327,9 @@ void loopButton()
     fill(resetWhite);
     textAlign(CENTER, CENTER);
     textFont(font, size);
+    soundEffect.pause();
+    soundEffect.rewind();
+    soundEffect.play();
   } else {
 
     stroke(green);
@@ -316,6 +352,9 @@ void nextButton()
     fill(resetWhite);
     textAlign(CENTER, CENTER);
     textFont(font, size);
+    soundEffect.pause();
+    soundEffect.rewind();
+    soundEffect.play();
   } else {
 
     stroke(green);
@@ -338,6 +377,9 @@ void backButton()
     fill(resetWhite);
     textAlign(CENTER, CENTER);
     textFont(font, size);
+    soundEffect.pause();
+    soundEffect.rewind();
+    soundEffect.play();
   } else {
 
     stroke(green);
@@ -360,6 +402,9 @@ void previousButton()
     fill(resetWhite);
     textAlign(CENTER, CENTER);
     textFont(font, size);
+    soundEffect.pause();
+    soundEffect.rewind();
+    soundEffect.play();
   } else {
 
     stroke(green);
@@ -382,6 +427,9 @@ void amplifyButton()
     fill(resetWhite);
     textAlign(CENTER, CENTER);
     textFont(font, size);
+    soundEffect.pause();
+    soundEffect.rewind();
+    soundEffect.play();
   } else {
 
     stroke(green);

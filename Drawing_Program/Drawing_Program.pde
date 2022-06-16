@@ -13,6 +13,7 @@ int numberOfSongs = 4;
 AudioPlayer[] song = new AudioPlayer[numberOfSongs]; //WAV, AIFF, AU, SND, & MP3
 AudioMetaData[] songMetaData = new AudioMetaData[numberOfSongs]; //meta data
 int currentSong = numberOfSongs - numberOfSongs;
+AudioPlayer soundEffect;
 
 color purple = #E60AFF;
 PFont titleFont;
@@ -53,7 +54,7 @@ void setup()
   song[currentSong+=1] = minim.loadFile("MusicDownload/Ghost_Walk.mp3");
   song[currentSong+=1] = minim.loadFile("MusicDownload/The_Simplest.mp3");
   song[currentSong+=1] = minim.loadFile("MusicDownload/MusicProgram_MusicDownload_groove.mp3");
-  //
+  // 
   currentSong-=currentSong; //currentSong = currentSong - currentSong
   for ( int i=currentSong; i<song.length; i++ ) {
     songMetaData[i] = song[i].getMetaData();
@@ -72,6 +73,7 @@ void setup()
   println( "Album: ", songMetaData[currentSong].album() );
   println( "Genre: ", songMetaData[currentSong].genre() );
 
+soundEffect = minim.loadFile("MusicDownload/Beep.mp3");
   Images();
 }
 //End setup
