@@ -13,6 +13,13 @@ float nextButtonX, nextButtonY, nextButtonWidth, nextButtonHeight;
 float backButtonX, backButtonY, backButtonWidth, backButtonHeight;
 float skipButtonX, skipButtonY, skipButtonWidth, skipButtonHeight;
 float amplifyButtonX, amplifyButtonY, amplifyButtonWidth, amplifyButtonHeight;
+float eraserButtonX, eraserButtonY, eraserButtonWidth, eraserButtonHeight;
+//
+float colorButtonX, colorButtonY, colorButtonWidth, colorButtonHeight;
+float greenButtonX, greenButtonY, greenButtonWidth, greenButtonHeight;
+float blueButtonX, blueButtonY, blueButtonWidth, blueButtonHeight;
+float redButtonX, redButtonY, redButtonWidth, redButtonHeight;
+float whiteButtonX, whiteButtonY, whiteButtonWidth, whiteButtonHeight;
 
 //
 
@@ -29,9 +36,6 @@ void QuitButton()
     textAlign(CENTER, CENTER);
     textFont(font, size);
     text(quitButtonText, quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight);
-    soundEffect.pause();
-    soundEffect.rewind();
-    soundEffect.play();
   } else {
 
     stroke(green);
@@ -58,9 +62,6 @@ void PaperButton()
     textAlign(CENTER, CENTER);
     textFont(font, size);
     text(paperButtonText, paperButtonX, paperButtonY, paperButtonWidth, paperButtonHeight);
-    soundEffect.pause();
-    soundEffect.rewind();
-    soundEffect.play();
   } else {
 
     stroke(green);
@@ -88,9 +89,6 @@ void EllipseTool()
     textAlign(CENTER, CENTER);
     textFont(font, size);
     text(ellipseButtonText, ellipseButtonX, ellipseButtonY, ellipseButtonWidth, ellipseButtonHeight);
-    soundEffect.pause();
-    soundEffect.rewind();
-    soundEffect.play();
   } else {
 
     stroke(green);
@@ -117,9 +115,6 @@ void SquareTool()
     textAlign(CENTER, CENTER);
     textFont(font, size);
     text(squareButtonText, squareButtonX, squareButtonY, squareButtonWidth, squareButtonHeight);
-    soundEffect.pause();
-    soundEffect.rewind();
-    soundEffect.play();
   } else {
 
     stroke(green);
@@ -136,34 +131,6 @@ void SquareTool()
 
 //
 
-/*void TriangleTool()
- {
- if ( mouseX>=triangleButtonX && mouseX<=triangleButtonX+triangleButtonWidth && mouseY>=triangleButtonY && mouseY<=triangleButtonY+triangleButtonHeight ) {
- stroke(turquoise);
- fill(blue);
- rect(triangleButtonX, triangleButtonY, triangleButtonWidth, triangleButtonHeight);
- fill(resetWhite);
- textAlign(CENTER, CENTER);
- textFont(font, size);
- text(triangleButtonText, triangleButtonX, triangleButtonY, triangleButtonWidth, triangleButtonHeight);
- soundEffect.pause();
- soundEffect.rewind();
- soundEffect.play();
- } else {
- 
- stroke(green);
- fill(resetWhite);
- rect(triangleButtonX, triangleButtonY, triangleButtonWidth, triangleButtonHeight);
- fill(black);
- textAlign(CENTER, CENTER);
- textFont(font, size);
- text(triangleButtonText, triangleButtonX, triangleButtonY, triangleButtonWidth, triangleButtonHeight);
- }
- fill(resetWhite);
- }
- //End TriangleTool
- */
-
 void LineTool()
 {
   if ( mouseX>=lineButtonX && mouseX<=lineButtonX+lineButtonWidth && mouseY>=lineButtonY && mouseY<=lineButtonY+lineButtonHeight ) {
@@ -174,9 +141,6 @@ void LineTool()
     textAlign(CENTER, CENTER);
     textFont(font, size);
     text(lineButtonText, lineButtonX, lineButtonY, lineButtonWidth, lineButtonHeight);
-    soundEffect.pause();
-    soundEffect.rewind();
-    soundEffect.play();
   } else {
 
     stroke(green);
@@ -202,9 +166,6 @@ void playButton()
     fill(resetWhite);
     textAlign(CENTER, CENTER);
     textFont(font, size);
-    soundEffect.pause();
-    soundEffect.rewind();
-    soundEffect.play();
   } else {
 
     stroke(green);
@@ -227,9 +188,6 @@ void forwardButton()
     fill(resetWhite);
     textAlign(CENTER, CENTER);
     textFont(font, size);
-    soundEffect.pause();
-    soundEffect.rewind();
-    soundEffect.play();
   } else {
 
     stroke(green);
@@ -252,9 +210,6 @@ void reverseButton()
     fill(resetWhite);
     textAlign(CENTER, CENTER);
     textFont(font, size);
-    soundEffect.pause();
-    soundEffect.rewind();
-    soundEffect.play();
   } else {
 
     stroke(green);
@@ -277,9 +232,6 @@ void muteButton()
     fill(resetWhite);
     textAlign(CENTER, CENTER);
     textFont(font, size);
-    soundEffect.pause();
-    soundEffect.rewind();
-    soundEffect.play();
   } else {
 
     stroke(green);
@@ -302,9 +254,6 @@ void stopButton()
     fill(resetWhite);
     textAlign(CENTER, CENTER);
     textFont(font, size);
-    soundEffect.pause();
-    soundEffect.rewind();
-    soundEffect.play();
   } else {
 
     stroke(green);
@@ -327,9 +276,6 @@ void loopButton()
     fill(resetWhite);
     textAlign(CENTER, CENTER);
     textFont(font, size);
-    soundEffect.pause();
-    soundEffect.rewind();
-    soundEffect.play();
   } else {
 
     stroke(green);
@@ -352,9 +298,6 @@ void nextButton()
     fill(resetWhite);
     textAlign(CENTER, CENTER);
     textFont(font, size);
-    soundEffect.pause();
-    soundEffect.rewind();
-    soundEffect.play();
   } else {
 
     stroke(green);
@@ -377,9 +320,6 @@ void backButton()
     fill(resetWhite);
     textAlign(CENTER, CENTER);
     textFont(font, size);
-    soundEffect.pause();
-    soundEffect.rewind();
-    soundEffect.play();
   } else {
 
     stroke(green);
@@ -402,9 +342,6 @@ void previousButton()
     fill(resetWhite);
     textAlign(CENTER, CENTER);
     textFont(font, size);
-    soundEffect.pause();
-    soundEffect.rewind();
-    soundEffect.play();
   } else {
 
     stroke(green);
@@ -427,9 +364,6 @@ void amplifyButton()
     fill(resetWhite);
     textAlign(CENTER, CENTER);
     textFont(font, size);
-    soundEffect.pause();
-    soundEffect.rewind();
-    soundEffect.play();
   } else {
 
     stroke(green);
@@ -453,9 +387,6 @@ void eraserButton()
     textAlign(CENTER, CENTER);
     textFont(font, size);
     text(eraser, eraserButtonX, eraserButtonY, eraserButtonWidth, eraserButtonHeight);
-    soundEffect.pause();
-    soundEffect.rewind();
-    soundEffect.play();
   } else {
 
     stroke(green);
@@ -469,3 +400,59 @@ void eraserButton()
   fill(resetWhite);
 }
 //End eraserButton
+
+void greenSetupButton()
+{
+  
+  }
+}
+//End greenSetupButton
+
+void greenButton() {
+
+}//End greenButton
+
+void blueSetupButton()
+{
+  if (mouseX>=blueButtonX && mouseX<=blueButtonX+blueButtonWidth && mouseY>=blueButtonY && mouseY<=blueButtonY+blueButtonHeight) {
+    noStroke();
+    fill(blue);
+    rect(blueButtonX, blueButtonY, blueButtonWidth, blueButtonHeight);
+  } else {
+
+    noStroke();
+    fill(turquoise);
+    rect(blueButtonX, blueButtonY, blueButtonWidth, blueButtonHeight);
+  }
+}
+//End blueSetupButton
+
+void redSetupButton()
+{
+  if (mouseX>=redButtonX && mouseX<=redButtonX+redButtonWidth && mouseY>=redButtonY && mouseY<=redButtonY+redButtonHeight) {
+    noStroke();
+    fill(Darkred);
+    rect(redButtonX, redButtonY, redButtonWidth, redButtonHeight);
+  } else {
+
+    noStroke();
+    fill(red);
+    rect(redButtonX, redButtonY, redButtonWidth, redButtonHeight);
+  }
+}
+//End redSetupButton
+
+void whiteSetupButton()
+{
+  if (mouseX>=whiteButtonX && mouseX<=whiteButtonX+whiteButtonWidth && mouseY>=whiteButtonY && mouseY<=whiteButtonY+whiteButtonHeight) {
+    noStroke();
+    fill(gray);
+    rect(whiteButtonX, whiteButtonY, whiteButtonWidth, whiteButtonHeight);
+  } else {
+
+    noStroke();
+    fill(resetWhite);
+    rect(whiteButtonX, whiteButtonY, whiteButtonWidth, whiteButtonHeight);
+  }
+}
+//End whiteSetupButton

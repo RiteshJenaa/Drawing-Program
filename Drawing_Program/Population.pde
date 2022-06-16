@@ -140,5 +140,26 @@ void population()
   eraserButtonY = displayHeight*0;
   eraserButtonWidth = quitButtonWidth;
   eraserButtonHeight = quitButtonHeight;
+  //
+  greenButtonX = displayWidth*4/5;
+  greenButtonY = displayHeight*1.75/5;
+  greenButtonWidth = displayWidth*1/20;
+  greenButtonHeight = displayHeight*1/20;
+  //
+  blueButtonX = displayWidth*4.26/5;
+  blueButtonY = greenButtonY;
+  blueButtonWidth = greenButtonWidth;
+  blueButtonHeight = greenButtonHeight;
+  //
+  redButtonX = displayWidth*4.52/5;
+  redButtonY = greenButtonY;
+  redButtonWidth = greenButtonWidth;
+  redButtonHeight = greenButtonHeight;
+  //
+  whiteButtonX = displayWidth*4.78/5;
+  whiteButtonY = greenButtonY;
+  whiteButtonWidth = greenButtonWidth;
+  whiteButtonHeight = greenButtonHeight;
+  //
 }
 //End population
